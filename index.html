@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="w-75 mx-auto my-2 text-center py-2">Bookmarker</h1>
+        <div class="d-flex justify-content-center align-items-center icons"><i class="fa-solid fa-bookmark"></i>
+            <h2>Bookmark your favorite sites</h2>
+            <i class="fa-solid fa-bookmark"></i>
+        </div>
+        <div class="w-75 mx-auto">
+            <label for="productName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+            <input oninput="validateSiteName()" type="text" id="siteName" class="form-control my-2"
+                placeholder="Enter Site Name">
+        </div>
+        <p class="text-danger d-none w-75 mx-auto" id="invalid-name">invalid site name</p>
+        <div class="w-75 mx-auto">
+            <label for="productPrice"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+            <input oninput="validateSiteUrl()" type="text" id="siteUrl" class="form-control my-2"
+                placeholder="Enter URL">
+        </div>
+        <p class="text-danger d-none w-75 mx-auto" id="invalid-url">invalid url</p>
+        <div class="w-75 mx-auto text-center my-3">
+            <button onclick="addSite()" class="btn btn-danger btn-lg">Submit</button>
+        </div>
+        <table class="table w-75 mx-auto">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete
+                </th>
+            </thead>
+            <tbody id="getData">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./Java/bootstrap.min.js"></script>
+    <script src="./Java/main.js"></script>
+</body>
+</html>

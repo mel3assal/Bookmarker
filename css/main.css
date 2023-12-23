@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(247, 236, 222);
+    min-height: 100vh;
+    font-family: "PT Sans Caption", sans-serif;
+}
+*{
+    box-sizing: border-box;
+
+}
+h1{
+    font-size: 50px;
+    font-family: Pacifico, cursive;
+    color: rgb(53, 46, 40);
+    font-weight: 500;
+    position: relative;
+}
+h1::before {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 25%;
+    left: 270px;
+    bottom: 10px;
+    background-color: rgb(254, 194, 96);
+    z-index: -1;
+    transition: height .2s;
+}
+h1:hover:before {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 45%;
+    left: 270px;
+    bottom: 10px;
+    background-color: rgb(254, 194, 96);
+    z-index: -1;
+}
+.icons{
+    font-family: Righteous, cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, rgb(60, 165, 92), rgb(181, 172, 73));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
